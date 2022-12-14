@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:flex;
+            width: 500px;
+            height: 300px;
+            margin: 50px 350px;
+        }
+
+        .box{
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            height: 300px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+    <script>
+        function dekor1() {
+            dekor_1 = document.getElementById("home");
+            dekor_1.style.color = "green";
+        }
+
+        function dekor2() {
+            dekor_2 = document.getElementById("home");
+            dekor_2.style.color = "black";
+        }
+        function image_picker(){
+            let pilihan = document.getElementById("select").value;
+            const list_image = ["beruang.png","bunga.png","drink.png","ice cream.png","pantai.png","pinguin.png"]
+                if(pilihan == "beruang"){
+                let select = list_image[0];
+                document.getElementById("image").src = `image/${select}`
+
+            }
+            if(pilihan == "bunga"){
+                let select = list_image[1];
+                document.getElementById("image").src = `image/${select}`
+
+            }
+            if(pilihan == "drink"){
+                let select = list_image[2];
+                document.getElementById("image").src = `image/${select}`
+
+            }
+            if(pilihan == "ice cream"){
+                let select = list_image[3];
+                document.getElementById("image").src = `image/${select}`
+
+            }
+            if(pilihan == "pantai"){
+                let select = list_image[4];
+                document.getElementById("image").src = `image/${select}`
+
+            }
+            if(pilihan == "pinguin"){
+                let select = list_image[5];
+                document.getElementById("image").src = `image/${select}`
+
+            }
+            
+            
+            
+        }
+    </script>
+</head>
+<body>
+
+    <a href="" onmouseover="dekor1()" onmouseout="dekor2()" id="home"><h1>Welcome to Reffy Shinta Dewi Image Picker</h1></a>
+    <hr>
+    <select name="" id="select" onchange="image_picker()">
+        <option value="">Pilih Gambar</option>
+        <option value="beruang"> Beruang </option>
+        <option value="bunga"> Bunga </option>
+        <option value="drink"> Drink </option>
+        <option value="ice cream"> Ice Cream</option>
+        <option value="pantai"> Pantai</option>
+        <option value="pinguin"> Pinguin </option>
+
+    </select>
+    <br>
+    <div class="container">
+        <div class="box">
+            <img id="image">
+        </div>
+    </div>
+</body>
+</html>
